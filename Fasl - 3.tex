@@ -1,16 +1,24 @@
 \documentclass[12pt, a4paper]{book}
 
+\title{جزوه هندسه}
+\author{ابوالفضل احمدی}
+
+\usepackage{setspace}
+\usepackage{multicol}
 \usepackage[margin=2cm]{geometry}
 \usepackage{tikz-cd}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{graphicx}
+
 \usepackage{xepersian}
-%\settextfont[Script=persian, Scale=1.3]{Vanda}
-%\setdigitfont[Scale=1.2]{Vanda}
-\settextfont{Yas}
-\setdigitfont{Yas}
+\settextfont[Script=arabic, Scale=1.3]{Dibaj}
+%\defpersianfont\nazi[Scale=1.1]{B Mitra}‎
+
 \begin{document}
+	\maketitle
+	\setstretch{1.3}
+	\setcounter{page}{1}
 \chapter{ترسیم‌های هندسی و استدلال}
 
 \section{ترسیم‌های هندسی}
@@ -316,7 +324,7 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 	$
 	\qquad حکم:
 	$ 
-		ABCD 
+		\mathrm{ABCD}
 	$ موازی‌الاضلاع است.
 	\begin{flushleft}
 		$ 
@@ -517,9 +525,7 @@ $.
 \end{minipage}
 
 \subsection{ویژگی‌ مهمی در مثلث قائم‌الزاویه}
-در هر مثلث قائم‌الزاویه ‌اندازه‌ی میانه‌ی وارد بر وتر
- \textbf{نصف}
- اندازه‌ی وتر است.
+در هر مثلث قائم‌الزاویه ‌اندازه‌ی میانه‌ی وارد بر وتر نصف اندازه‌ی وتر است.
  
  \begin{minipage}{.65\textwidth}
  	\centering فرض: 
@@ -631,7 +637,7 @@ $.
 	\newline \smallskip
 	
 	{\large در هر لوزی اقطار \textbf{عمودمنصف} یکدیگیر و روی \textbf{نیمساز} زوایا هستند.}
-	
+
 \end{minipage}
 \begin{minipage}{.2\textwidth}
 	\begin{flushleft}
@@ -647,7 +653,8 @@ $.
 
 \begin{minipage}{.67\textwidth}
 
-هر یک از دو ضلع $AB$، $CD$ را که موازی‌اند، \textbf{قاعده} و هر یک از دو ضلع غیر موازی را \textbf{ساق} می نامند. از موازی بودن قاعده‌های $AB$ ، $CD$ و قاطع‌های $BC$ و $AD$ در زوایا می‌توان نتیجه گرفت که:
+هر یک از دو ضلع $AB$، $CD$ را که موازی‌اند،
+ \textbf{قاعده} و هر یک از دو ضلع غیر موازی را \textbf{ساق} می نامند. از موازی بودن قاعده‌های $AB$ ، $CD$ و قاطع‌های $BC$ و $AD$ در زوایا می‌توان نتیجه گرفت که:
 \newline
 
 زوایای $ \widehat{A}$ و $ \widehat{ِD}$ مکمل‌اند، همچنین زوایای  $ \widehat{B}$ و $ \widehat{C}$ مکمل هستند.
@@ -844,8 +851,121 @@ $.
 
 %\textbf{تمرین}
 \subsection{تمرین}
-	\subsubsection[1]{}
-	۱ - در کدام n ضلعی تعداد اقطار و اضلاع برابر است؟
+	\begin{multicols}{2}
+			\textbf{۱-} در کدام n ضلعی تعداد اقطار و اضلاع برابر است؟
+			\bigskip
+			
+				\textbf{۲- }در دو چهارضلعی مقابل 
+			$ AB = A'B' $
+			و
+			$ \angle B = \angle B' $
+			و
+			$ BC = B'C' $
+			و
+			$ \angle C = \angle C' $
+			و
+			$ CD = C'D' $
+			است. چگونه مساوی بودن اندازه‌های سایر ضلع‌ها و زاویه‌ها را نتیجه می‌گیرید؟
+			
+			اگر 
+			$ \angle B = \angle B' $
+			و
+			$ BC = B'C' $
+			و
+			$ \angle C = \angle C' $
+			و
+			$ CD = C'D' $
+			و
+			$ \angle D = \angle D' $
+			در این حالت چگونه مساوی بودن اندازه‌های سایر ضلع‌ها و زاویه‌ها را نتیجه می‌گیرید؟
+
+\begin{center}
+					\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S3,4.pdf"}
+\end{center}
+
+\bigskip
+				\textbf{۳-} از تقاطع نیم‌سازهای داخلی یک متوازی‌الضلاع، چهارضلعی
+			MNPQ
+			پدید آمده‌است. ثابت کنید این چهارضعلی مستطیل است.
+			
+\begin{center}
+				\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S5.pdf"}
+\end{center}
+
+			\bigskip
+			\textbf{۴-}مثلث قائم الزاویه‌ی 
+			$\triangle ABC$
+			را که در آن 
+			$\angle A$
+			قائمه و اندازه‌ی
+			$\angle C$
+			برابر 
+			$30^{\circ}$
+			است، در نظر می‌گیریم. میانه‌ی وارد بر وتر را رسم کنید. مثلث های 
+			$AMC$
+			و
+			$AMB$
+			چگونه مثلث‌هایی هستند؟ نشان دهید 
+			$AB = \dfrac{BC}{2}$
+			یعنی در هر مثلث قائم الزاویه اگر اندازه‌ی یک زاویه 
+			$30^{\circ}$
+			باشد، اندازه‌ی ضلع مقابل آن نصف اندازه‌ی وتر است.
+			
+			سپس با استفاده از قضیه‌ی فیثاغورث نشان دهید
+			$AC = \frac{\sqrt{3}}{2}BC$  
+			
+			یعنی در هر مثلث قائم الزاویه اگر یک زاویه 
+			$60^{\circ}$
+			باشد، اندازه‌ی ضلع مقابل آن  اندازه‌ی وتر است.
+			
+			اکنون مثلث قائم الزاویه ای رسم کنید که اندازه‌ی یک زاویه‌ی آن 
+			$45^{\circ}$
+			باشد و نشان دهید که اندازه‌ی هر ضلع زاویه‌ی قائمه در آن 
+			$\frac{\sqrt{2}}{2}$
+			اندازه‌ی وتر است.
+			
+\begin{center}
+				\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S1.pdf"}
+\end{center}
+
+			\bigskip
+			\textbf{۵-}در مثلث قائم الزاویه‌ی 
+			$\triangle ABC$
+			اندازه‌ی زاویه‌ی 
+			$\widehat{B}$
+			برابر 
+			$15^{\circ}$
+			است. با رسم میانه و ارتفاع وارد بر وتر نشان دهید اندازه‌ ارتفاع وارد بر وتر 
+			$\frac14$
+			اندازه‌ی وتر است.
+			
+			\begin{center}
+				\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S2.pdf"}
+			\end{center}
+		
+			\bigskip
+			 \textbf{۶-} در متوازی الاضلاع  
+			$ABCD$،
+			$M$ و $N$
+			به ترتیب وسط های ضلع های 
+			$AD$ و $BC$
+			می‌باشند. چرا خطوط
+			$MB$ و $ND$
+			موازی‌اند؟ به کمک آن ثابت کنید $AP = PQ = QC$
+			
+			\bigskip
+			\textbf{7-}ثابت کنید اگر وسط های ضل عهای هر چهارضلعی را به طور متوالی به هم وصل کنیم، یک متواز یالاضلاع پدید می آید.
+			
+			این چهارضلعی باید چه ویژگی ای داشت هباشد تا این متواز یالاضلاع مستطیل یا لوزی شود؟
+			
+			چه رابطه‌ای بین محیط متوازی الاضلاع پدید آمده با اندازه‌های قطر‌های چهارضلعی اولیه وجود دارد؟
+			
+	\end{multicols}
+
+\newpage
+
+\subsection{پاسخ}
+	\subsubsection[1]{۱)}
 	\begin{flushleft}
 		$
 			n = \dfrac{n(n-3)}{2} \Rightarrow 2n = n^2 - 3n \Rightarrow n^2 -5n = 0 \Rightarrow n(n-5) = 0 \Rightarrow 
@@ -857,53 +977,9 @@ $.
 			\right.
 		$
 	\end{flushleft}
-	\subsubsection[2]{}
-		   \begin{minipage}{.75\textwidth}
-	۲ - در دو چهارضلعی مقابل 
-	 $ AB = A'B' $
-	 و
-	 $ \angle B = \angle B' $
-	 و
-	 $ BC = B'C' $
-	 و
-	 $ \angle C = \angle C' $
-	 و
-	 $ CD = C'D' $
-	 است. چگونه مساوی بودن اندازه‌های سایر ضلع‌ها و زاویه‌ها را نتیجه می‌گیرید؟
-	 \bigskip
-	 
-	 اگر 
-	 $ \angle B = \angle B' $
-	 و
-	 $ BC = B'C' $
-	 و
-	 $ \angle C = \angle C' $
-	 و
-	 $ CD = C'D' $
-	 و
-	  $ \angle D = \angle D' $
-	  در این حالت چگونه مساوی بودن اندازه‌های سایر ضلع‌ها و زاویه‌ها را نتیجه می‌گیرید؟
+	\subsubsection[2]{۲)}
 	  
-	  \end{minipage}
-	  \begin{minipage}{.25\textwidth}
-	  	\begin{flushleft}
-	  		\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S3,4.pdf"}
-	  	\end{flushleft}
-	  \end{minipage}
-	  
-	\subsubsection[3]{}
-	    \begin{minipage}{.75\textwidth}
-			
-			۳ - از تقاطع نیم‌سازهای داخلی یک متوازی‌الضلاع، چهارضلعی
-			$MNPQ$
-			پدید آمده‌است. ثابت کنید این چهارضعلی مستطیل است.
-	   \end{minipage}
-	   \begin{minipage}{.25\textwidth}
-	   	\begin{flushleft}
-	   		\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S5.pdf"}
-	   	\end{flushleft}
-	   \end{minipage}
-   
+	\subsubsection[3]{۳)}   
    	\begin{flushleft}
 	$
    		\left.
@@ -918,39 +994,8 @@ $.
    	$
    \end{flushleft}
    
-	\subsubsection[4]{}
-	 ۴ - مثلث قائم الزاویه‌ی 
-	$\triangle ABC$
-	  را که در آن 
-	$\angle A$
-	   قائمه و اندازه‌ی
-	$\angle C$
-	    برابر 
-	$30^{\circ}$
-	     است، در نظر می‌گیریم. میانه‌ی وارد بر وتر را رسم کنید. مثلث های 
-	$AMC$
-	و
-	$AMB$
-	 چگونه مثلث‌هایی هستند؟ نشان دهید 
-	$AB = \dfrac{BC}{2}$
-	  یعنی در هر مثلث قائم الزاویه اگر اندازه‌ی یک زاویه 
-	$30^{\circ}$
-	   باشد، اندازه‌ی ضلع مقابل آن نصف اندازه‌ی وتر است.
-	 
-	 سپس با استفاده از قضیه‌ی فیثاغورث نشان دهید
-	$AC = \frac{\sqrt{3}}{2}BC$  
-	 
-	 یعنی در هر مثلث قائم الزاویه اگر یک زاویه 
-	$60^{\circ}$
-	  باشد، اندازه‌ی ضلع مقابل آن  اندازه‌ی وتر است.
-	 
-	 اکنون مثلث قائم الزاویه ای رسم کنید که اندازه‌ی یک زاویه‌ی آن 
-	 $45^{\circ}$
-	  باشد و نشان دهید که اندازه‌ی هر ضلع زاویه‌ی قائمه در آن 
-	  $\frac{\sqrt{2}}{2}$
-	   اندازه‌ی وتر است.
-	   
-		\begin{minipage}{.75\textwidth}
+	\subsubsection[4]{۴)}
+
 			\begin{flushleft}
 					$
 					BM = AM \Rightarrow \text{ABM متساوی‌الاضلاع است}
@@ -966,25 +1011,8 @@ $.
 					AB^2 + AC^2 = BC^2 \Rightarrow \dfrac{BC^2}{4} + AC^2 = BC^2 \Rightarrow AC^2 = BC^2 - \dfrac{BC^2}{4} \Rightarrow AC^2 = 3bc^2 \Rightarrow AC = BC \dfrac{\sqrt{3}}{2}
 				$
 			\end{flushleft}
-		\end{minipage}
-		\begin{minipage}{.25\textwidth}
-		  	\begin{flushleft}
-		  		\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S1.pdf"}
-		  	\end{flushleft}
-		\end{minipage}
 
-	\subsubsection[5]{}
-	 ۵ - در مثلث قائم الزاویه‌ی 
-	 $\triangle ABC$
-	  اندازه‌ی زاویه‌ی 
-	  $\widehat{B}$
-	   برابر 
-	   $15^{\circ}$
-	    است. با رسم میانه و ارتفاع وارد بر وتر نشان دهید اندازه‌ ارتفاع وارد بر وتر 
-	    $\frac14$
-	     اندازه‌ی وتر است.
-	     
-	  \begin{minipage}{0.75\textwidth}
+	\subsubsection[5]{۵)}
 	     	\begin{flushleft}
 	     		$ \triangle AHM:$
 	     		$
@@ -997,30 +1025,16 @@ $.
 	     			\rightarrow AH = \frac12 \left( \frac12 BC \right) \Rightarrow AH = \frac14 BC
 	     		$
 	     	\end{flushleft}
-	  \end{minipage}   
-	\begin{minipage}{.25\textwidth}
-		\begin{flushleft}
-			\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S2.pdf"}
-		\end{flushleft}
-	\end{minipage}
-
-	\subsubsection[6]{}
-	 ۶ - در متوازی الاضلاع  
-	 $ABCD$،
-	 $M$ و $N$
-	  به ترتیب وسط های ضلع های 
-	  $AD$ و $BC$
-	   می‌باشند. چرا خطوط
-	   $MB$ و $ND$
-	   موازی‌اند؟ به کمک آن ثابت کنید $AP = PQ = QC$
-	\subsubsection[7]{}
-7 - ثابت کنید اگر وسط های ضل عهای هر چهارضلعی را به طور متوالی به هم وصل کنیم، یک متواز یالاضلاع پدید می آید.
- 
- این چهارضلعی باید چه ویژگی ای داشت هباشد تا این متواز یالاضلاع مستطیل یا لوزی شود؟
- 
- چه رابطه ای بین محیط متوازی الاضلاع پدید آمده با انداز ههای قطر های چهارضلعی اولیه وجود دارد؟
 
 
+	\subsubsection[6]{۶)}
+	
+	\subsubsection[7]{۷)}
+	
+
+
+
+\newpage
 \section{مساحت و کاربردهای آن}
 
 \textbf{یادآوری}
@@ -1039,11 +1053,11 @@ $.
 \end{minipage}
 
 \begin{minipage}{0.65\textwidth}
-	۳- اگر اندازهٔ یک ضلع متوازی الاضلاع a و اندازهٔ ارتفاع نظیر آن h باشد، $S=ah$.
+۳- اگر اندازهٔ یک ضلع متوازی الاضلاع a و اندازهٔ ارتفاع نظیر آن h باشد، \\ $S=ah$.
+
+۴-اگر اندازه های دو قطر لوزی m و n باشند، $S=\frac12 nm$.
 	
-	۴- اگر اندازه های دو قطر لوزی m و n باشند، $S=\frac12 nm$.
-	
-	۵- اگر اندازه های دو قاعدهٔ یک ذوزنقه a و b و اندازه‌ی ارتفاع آن h باشد\\
+۵- اگر اندازه های دو قاعدهٔ یک ذوزنقه a و b و اندازه‌ی ارتفاع آن h باشد\\
 	 $S = \dfrac{(a+b)h}2$
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
@@ -1113,7 +1127,7 @@ $.
 
 بنابراین؛
 
-\textbf{در هر چهارضلعی‌ای که دو قطر آن برهم عمود باشند، مساحت برابر است با نصف حاصل ضرب دو قطر. }
+در هر چهارضلعی‌ای که دو قطر آن برهم عمود باشند، مساحت برابر است با نصف حاصل ضرب دو قطر.
 
 \subsection{کاربردهایی از مساحت}
 قبلاً با کاربرد مساحت در اثبات قضیهٔ تالس آشنا شدید. بعضی رابطه ها و ویژگی‌هایی را که با آن آشنا شده اید یادآوری می کنیم.
@@ -1223,8 +1237,6 @@ $S = \dfrac{b}{2} -1 + i$
 
 به کمک این فرمول می توانیم مساحت شکل های نامنظم هندسی را نیز به طور تقریبی پیدا کنیم.
 
-\newpage
-
 چندضلعی های 
 \lr{A} ،
 \lr{B} ،
@@ -1239,9 +1251,11 @@ $S = \dfrac{b}{2} -1 + i$
 	\end{center}
 \end{minipage}
 
-\subsubsection{تمرین}
+\subsection{تمرین}
+\begin{multicols}{2}
 
-۱ــ در یک لوزی اندازهٔ هر ضلع 
+
+\textbf{۱- }در یک لوزی اندازهٔ هر ضلع 
 $2\sqrt{10}$
 و نسبت اندازه های دو قطر
 $\dfrac12$
@@ -1249,7 +1263,7 @@ $\dfrac12$
 
 \bigskip
 
-۲ــ در چهارضلعی
+\textbf{۲-} در چهارضلعی
 \lr{ABCD}،
 مطابق شکل 
 $AB = AD$
@@ -1263,14 +1277,15 @@ $\angle A$
 $\angle C$
 است. اگر اندازه های دو قطر ۸ و ۶ باشند، مساحت آن را محاسبه کنید. چهارضلعی ای با این ویژگی کایت نام دارد. نشان دهید در کایت یک قطر عمودمنصف قطر دیگر است.
 
-\begin{minipage}{1\textwidth}
-	\begin{flushleft}
+
+	\begin{center}
 		\includegraphics{"Shapes/Fasl - 3/Dars 2/P72-S1.pdf"}
-	\end{flushleft}
-\end{minipage}
+	\end{center}
 
 
+\end{multicols}
 
+\subsection{پاسخ}
 \chapter{تجسم فضایی}
 
 \section{خط، نقطه و صفحه}
