@@ -1,19 +1,25 @@
-\documentclass[12pt, a4paper, twoside]{book}
+\documentclass[12pt, a4paper]{book}
 
 \title{جزوه هندسه}
 \author{ابوالفضل احمدی}
 
 \usepackage{setspace}
-\usepackage{multicol}
+\usepackage{multicol, caption}
 \usepackage[margin=2cm]{geometry}
 \usepackage{tikz-cd}
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{graphicx}
+\usepackage{lipsum}
+
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
 
 \usepackage{xepersian}
-\settextfont[Script=arabic, Scale=1.3]{Dibaj}
+\settextfont[Script=Arabic, Scale=1.3]{Dibaj}
 %\defpersianfont\nazi[Scale=1.1]{B Mitra}‎
+
 
 \begin{document}
 	\maketitle
@@ -61,10 +67,10 @@ $\mathrm{2cm}$
 \textbf{تعریف:}
 n
 ضلعی شکلی است شامل 
-$\text{n}(3 \geq \text{n})$
+$\text{n}(\mbox{3} \geq \text{n})$
 پاره‌خط متوالی که:\\
-(1 هرپاره‌خطی، دقیقاً دو پاره‌خط دیگر را در نقاط انتهایی خودش قطع کند.\\
-(2 هر دو پاره‌خط که در یک انتها مشترک‌اند، روی یک خط نباشند.
+1) هر پاره‌خطی، دقیقاً دو پاره‌خط دیگر را در نقاط انتهایی خودش قطع کند.\\
+2) هر دو پاره‌خط که در یک انتها مشترک‌اند، روی یک خط نباشند.
 
 \subsection{قطر در چندضلعی‌ها}
 
@@ -74,12 +80,12 @@ n
 
 n
 ضلعی 
-$\mbox{A}_{1}\mbox{A}_{2} \dots \mbox{A}_{\mbox{n}}$
-را در نظر می‌کیریم. از رأس 
-$\mbox{A}_{1}$،
+$\mbox{A}_{\mbox{1}}\mbox{A}_{\mbox{2}}\dots\mbox{A}_{\mbox{n}}$
+ را در نظر می‌گیریم. از رأس 
+$\mbox{A}_{\mbox{1}}$،
 n-۱
 قطر می‌توان رسم کرد.\\
-با توجه به اینکه n رأس داریم، می‌توان گفت تعداد قطرها در n ضلعی با این فرمول به‌دست می‌آید:
+با توجه به اینکه n رأس داریم، می‌توان گفت تعداد اقطار در n ضلعی با این فرمول به‌دست می‌آید:
 \begin{minipage}{2 cm}
 	\centering
 	$\dfrac{n(n-3)}{2}$
@@ -95,7 +101,7 @@ $\dfrac{n(n-3)}{2} = 35 \Rightarrow x^2 -3x = 70 \Rightarrow (x-10)(x+7) = 0 \Ri
 \end{array} \right.$
 \end{flushleft}
 
-تعداد اقطار یک چند ضلعی محدب از تعداد اضلاع آن ۴۲تا بیشتر است. این چند ضلعی چند قطر دارد؟
+تعداد اقطار یک چند ضلعی محدب از تعداد اضلاع آن ۴۲ تا بیشتر است. این چند ضلعی چند قطر دارد؟
 \begin{flushleft}
 $\dfrac{n(n-3)}{2} = x+42 \Rightarrow x^2 -3x = 2x +84 \Rightarrow x^2 -5x -84 =0 \Rightarrow (x+7)(x-12) = 0  \Rightarrow \left\{ \begin{array}{lll}
 \fbox{$x = 12$} & \mbox{ق‌ق} \\ x = -7 & \mbox{غ‌ق‌ق}
@@ -120,6 +126,7 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
  \fbox{$n = 16$} & \mbox{ق‌ق} \\ n =-17 & \mbox{غ‌ق‌ق}
 \end{array} \right.$
 \end{flushleft}
+
 
 \subsection{چهارضلعی‌های مهم و ویژگی‌هایی  آنها}
 \textbf{تعریف:}
@@ -153,14 +160,13 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 
 \subsection{ویژگی‌هایی از متوازی‌الاضلاع}
 متوازی‌الاضلاع چهارضلعی‌ای است که، هر دو ضلع مقابل آن موازی باشند.
-\newline
 
 \textbf{قضیه ۱}: هر در متوازی‌الاضلاع هر دو ضلع مقابل هم‌اندازه‌اند.
 
-\begin{minipage}{.7\textwidth}
-		\centering فرض: 
+\begin{minipage}{.75\textwidth}
+ فرض: 
 		$AB \parallel CD, \; AD \parallel BC$
-		\qquad حکم:
+		\hfill حکم:
 		$AB = CD, \; AD = BC$
 	\begin{flushleft}
 			$ \left. \begin{array}{rll}
@@ -169,20 +175,20 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 		\Rightarrow AB = CD \, , \, AD = BC$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/qazie 1.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/qazie 1.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newline \bigskip \bigskip
+%\newline 
+%\bigskip \bigskip
 
 \textbf{عکس قضیه ۱}: اگر در یک چهارضلعی، اضلاع مقابل دوبه‌دو هم‌اندازه باشند، چهارضلعی متوازی‌الاضلاع است.
 
-	\begin{minipage}{.73\textwidth}
-		\centering
+	\begin{minipage}{.75\textwidth}
 	فرض: 
 	$AB = CD, \; AD = BC$
-	\qquad حکم:
+	\hfill حکم:
 	$AB \parallel CD, \; AD \parallel BC$
 	\begin{flushleft}
 		$ \left. \begin{array}{lll}
@@ -193,19 +199,18 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 		\end{array} \right.$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/qazie 1.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/qazie 1.pdf"}
 	\end{flushleft}
 \end{minipage} 
-\newpage \bigskip
 
 \textbf{قضیه ۲}: در متوازی‌الاضلاع هر دو زاویه‌ی مجاور مکمل‌اند.
 
-\begin{minipage}{.7\textwidth}
-	\centering فرض: 
+\begin{minipage}{.75\textwidth}
+	 فرض: 
 	$AB \parallel CD, \; AD \parallel BC$
-	\qquad حکم:
+	\hfill حکم:
 	$ \left. \begin{array}{rrr}
 		\widehat{B}_2 + \widehat{C}_1 = 180^{\circ} \\ \widehat{C}_1 + \widehat{D} = 180^{\circ}
 	\end{array} \right\}$
@@ -219,17 +224,16 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 		\end{array} \right\} \rightarrow \widehat{D} + \widehat{C}_1 = 180^{\circ}$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/qazie 2.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/qazie 2.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newline \bigskip \bigskip
 
 \textbf{عکس قضیه ۲}: هر چهارضلعی که ر دو زاویه‌ی مجاور آن مکمل‌ باشند، متوازی‌الاضلاع است.
 
-\begin{minipage}{.7\textwidth}
-	\centering فرض: 
+\begin{minipage}{.75\textwidth}
+	 فرض: 
 	$\left.
 	\begin{array}{rrr}
 		B_2 + D =180^{\circ} \\
@@ -238,7 +242,7 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 		A + B_2 = 180^{\circ}
 	\end{array}
 	\right\}$
-	\qquad حکم:
+	\hfill حکم:
 	$ \left. 
 	\begin{array}{rrr}
 		AB \parallel CD \\
@@ -263,24 +267,23 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 	  \rightarrow \widehat{B}_1 = \widehat{C}_1 \Rightarrow AB \parallel CD$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.3\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/qazie 2.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/qazie 2.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newline \bigskip \bigskip
 
 \textbf{قضیه ۳}: در هر متوازی‌الضلاع، هر دو زاویه‌ی مقابل هم اندازه‌اند.
 
-\begin{minipage}{.68\textwidth}
-	\centering فرض: 
+\begin{minipage}{.75\textwidth}
+	 فرض: 
 	$\left.
 	\begin{array}{rrr}
 		AB \parallel CD \\
 		BC \parallel AD
 	\end{array}
 	\right\}$
-	\qquad حکم:
+	\hfill حکم:
 	$ \left. 
 	\begin{array}{rrr}
 		\widehat{A} = \widehat{C} \\
@@ -308,21 +311,20 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 	  \rightarrow \widehat{B} = \widehat{D}$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/qazie 3.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/qazie 3.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newline \bigskip \bigskip
 
 \textbf{عکس قضیه ۳}: در هر یک چهارضلعی هر دو زاویه‌ی مقابل هم‌اندازه باشند، چهارضلعی متوازی‌الاضلاع است.
 
-\begin{minipage}{.68\textwidth}
-	\centering فرض: 
+\begin{minipage}{.75\textwidth}
+ فرض: 
 	$
 		\widehat{A} = \widehat{C} = x \; , \; \widehat{B} = \widehat{C} = y
 	$
-	\qquad حکم:
+	\hfill حکم:
 	$ 
 		\mathrm{ABCD}
 	$ موازی‌الاضلاع است.
@@ -333,21 +335,20 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 	\end{flushleft}
 		هر دو زاویه‌ی مجاور مکمل‌اند،  بنابر عکس قضیه‌ ۲، ABCD متوازی‌الاضلاع است.
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/qazie 3 ax.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/qazie 3 ax.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newpage
 
 \textbf{قضیه ۴}: در هر متوازی‌الاضلاع اقطار منصف یکدیگیرند.
 
-\begin{minipage}{.68\textwidth}
-	\centering فرض: 
+\begin{minipage}{.75\textwidth}
+ فرض: 
 	$
 		AB \parallel CD \; , \; AD = BC
 	$
-	\qquad حکم:
+	\hfill حکم:
 	$ 
 		OA = OC \; , \; OD = OB
 	$
@@ -369,21 +370,20 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 		$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/qazie 4.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/qazie 4.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newline \bigskip \bigskip
 
 \textbf{عکس قضیه ۴}: هر چهارضلعی‌ای که اقطارش منصف یکدیگر باشند، متوازی‌الاضلاع است.\\
 
-\begin{minipage}{.68\textwidth}
-	\centering فرض: 
+\begin{minipage}{.75\textwidth}
+ فرض: 
 	$
 	 OA = OC \; , \; OD = OB
 	$
-	\qquad حکم:
+	\hfill حکم:
 	$ 
 	AB \parallel CD \; , \; AD = BC
 	$
@@ -409,21 +409,20 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 		
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/qazie 4 ax.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/qazie 4 ax.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newline \bigskip \bigskip
 
 هر در چهارضلعی که دو ضلع آن هم‌اندازه و موازی باشند.، متوازی‌الاضلاع است.
 
-\begin{minipage}{.68\textwidth}
-	\centering فرض: 
+\begin{minipage}{.75\textwidth}
+فرض: 
 	$
 	AB = CD \; , \; AB \parallel CD
 	$
-	\qquad حکم:
+	\hfill حکم:
 	$ 
 	BC \parallel AD
 	$
@@ -445,12 +444,11 @@ $\dfrac{n+1(n+1-3)}{2} + n = 120 \Rightarrow \dfrac{2n^2-3}{2} = 120 \Rightarrow
 		
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-1.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/2-1.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newline
 
 \subsection{ویژگی‌هایی از مستطیل و لوزی}
 در مستطیل 
@@ -465,12 +463,12 @@ $
 $
 BCD
 $
-می‌توان نتیجه گرفت 
+می‌توان نتیجه گرفت \\
 $
 AC = BD
 $.
 
-\begin{minipage}{.68\textwidth}
+\begin{minipage}{.75\textwidth}
 	\begin{flushleft}
 		$ 
 		\left. 
@@ -486,18 +484,17 @@ $.
 		
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.28\textwidth}
+\begin{minipage}{.25\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-1.1.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/2-1.1.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newline
 
 بنابراین در هر مستطیل اقطار برابرند.
 
 اگر دو قطر یک چهار ضلعی هم‌اندازه باشند. نمی‌توان نتیجه گرفت که آن چهارضلعی مستطیل است، ولی اگر آن چهارضلعی متوازی‌الاضلاع باشد، حتما مستطیل است.
 
-\begin{minipage}{.47\textwidth}
+\begin{minipage}{.65\textwidth}
 	\begin{flushleft}
 		$ 
 		\left. 
@@ -508,31 +505,28 @@ $.
 		\end{array}
 		\right\}
 		\xRightarrow{\mbox{ض‌ض‌ض}} \triangle ACD \cong \triangle BCD 
-		$
-		\centering
-		$
 		\rightarrow 
 		\widehat{D} =\widehat{C} = 90^{\circ}
 		$
 		
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.49\textwidth}
+\begin{minipage}{.39\textwidth}
 	\begin{flushleft}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-1.3.pdf"}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-1.2.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/2-1.3.pdf"}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/2-1.2.pdf"}
 	\end{flushleft}
 \end{minipage}
 
 \subsection{ویژگی‌ مهمی در مثلث قائم‌الزاویه}
 در هر مثلث قائم‌الزاویه ‌اندازه‌ی میانه‌ی وارد بر وتر نصف اندازه‌ی وتر است.
  
- \begin{minipage}{.65\textwidth}
- 	\centering فرض: 
+ \begin{minipage}{.75\textwidth}
+ 	 فرض: 
  	$
  	\widehat{A} = 90^{\circ} \; , \; BM = MC
  	$
- 	\qquad حکم:
+ 	\hfill حکم:
  	$ 
  	AM = \dfrac{BC}{2}
  	$
@@ -557,25 +551,23 @@ $.
 
  	\end{flushleft}
  \end{minipage}
- \begin{minipage}{.28\textwidth}
+ \begin{minipage}{.25\textwidth}
  	\begin{flushleft}
- 		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-2.1.pdf"}
+ 		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/2-2.1.pdf"}
  	\end{flushleft}
  \end{minipage}
- \newline \bigskip
  
  اگر در مثلثی اندازه‌ی میانه‌ی وارد بر ضلع، نصف اندازه‌ی آن ضلع باشد، آن مثلث قائم‌الزاویه‌ است.
  
-  \begin{minipage}{.65\textwidth}
- 	\centering فرض: 
+  \begin{minipage}{.7\textwidth}
+ 	 فرض: 
  	$
  	 AM = \dfrac{BC}{2} \; , \; BM = CM
  	$
- 	\qquad حکم:
+ 	\hfill حکم:
  	$ 
  	\widehat{A} = 90^{\circ}
- 	$
- 	\newline
+ 	$\\
  	روی نیم‌خط $AM$ نقطه‌ی $D$ را چنان در نظر می‌گیریم که $DM = AM$.
  	\begin{flushleft}
  		$ 
@@ -602,9 +594,9 @@ $.
  		
  	\end{flushleft}
  \end{minipage}
- \begin{minipage}{.34\textwidth}
+ \begin{minipage}{.3\textwidth}
  	\begin{flushleft}
- 		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-2.2.pdf"}
+ 		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/2-2.2.pdf"}
  	\end{flushleft}
  \end{minipage}
  
@@ -612,6 +604,7 @@ $.
 \subsection{ویژگی‌هایی که فقط در لوزی برقرارند}
 
 \begin{minipage}{.8\textwidth}
+	
 	اقطار لوزی
 	$ABCD$
 	را رسم می‌کنیم. چون لوزی متوازی‌الاضلاع است، اقطار منصف یکدیگرند. 
@@ -634,9 +627,8 @@ $.
 	است.
 	
 	بنابراین؛
-	\newline \smallskip
-	
-	{\large در هر لوزی اقطار \textbf{عمودمنصف} یکدیگیر و روی \textbf{نیمساز} زوایا هستند.}
+
+ در هر لوزی اقطار \underline{عمودمنصف} یکدیگیر و روی \underline{نیمساز} زوایا هستند.
 
 \end{minipage}
 \begin{minipage}{.2\textwidth}
@@ -644,7 +636,6 @@ $.
 		\includegraphics[width=3cm]{"Shapes/Fasl - 3/Dars 1/2-3.1.pdf"}
 	\end{flushleft}
 \end{minipage}
-\newpage
 
 \subsection{ذوزنقه}
 ذوزنقه چهارضلعی‌ای است که با چهارضلعی‌هایی که قبلاً بررسی کردیم، کمی متفاوت است.
@@ -666,16 +657,16 @@ $.
 هرگاه در یک ذوزنقه یک ساق بر قاعده‌ها عمود باشد، مسلماً بر قاعده‌ی دیگر نیز عمود است. در این صورت ذوزنقه را قائم‌الزاویه می‌نامند.
 \end{minipage}
 \begin{minipage}{.3\textwidth}
-	\begin{center}
+	\begin{flushleft}
 		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-4.1.pdf"}
 		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-4.2.pdf"}
-	\end{center}
+	\end{flushleft}
 \end{minipage}
 
 در هر ذوزنقه‌ی متساوی‌الساقین زاویه‌های مجاور به یک قاعده هم‌اندازه‌اند.
 
-\begin{minipage}{.67\textwidth}
-\begin{center}
+\begin{minipage}{.7\textwidth}
+
 	فرض:
 	$
 		\left.
@@ -685,7 +676,7 @@ $.
 			\end{array}
 		\right\}
 	$
-	\qquad
+	\hfill
 	حکم:
 	$
 		\left.
@@ -695,7 +686,7 @@ $.
 			\end{array}
 		\right\}
 	$
-\end{center}
+
 \begin{flushleft}
 	$
 	\left.
@@ -718,16 +709,15 @@ $.
 	$
 \end{flushleft}
 \end{minipage}
-\begin{minipage}{.4\textwidth}
-\begin{center}
-\includegraphics{"Shapes/Fasl - 3/Dars 1/2-4.3.pdf"}
-\end{center}
+\begin{minipage}{.3\textwidth}
+\begin{flushleft}
+\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/2-4.3.pdf"}
+\end{flushleft}
 \end{minipage}
 
 اگر در یک ذوزنقه دو زاویه‌ی مجاور به یک قاعده هم‌اندازه باشند، ذوزنقه متساوی‌الساقین است.
 
-\begin{minipage}{.67\textwidth}
-	\begin{center}
+\begin{minipage}{.7\textwidth}
 		فرض:
 		$
 		\left.
@@ -737,7 +727,7 @@ $.
 		\end{array}
 		\right\}
 		$
-		\qquad
+		\hfill
 		حکم:
 		$
 		\left.
@@ -746,7 +736,7 @@ $.
 		\end{array}
 		\right\}
 		$
-	\end{center}
+
 	\begin{flushleft}
 		$
 		\left.
@@ -769,21 +759,21 @@ $.
 		$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.4\textwidth}
-	\begin{center}
-		\includegraphics{"Shapes/Fasl - 3/Dars 1/2-4.3.pdf"}
-	\end{center}
+\begin{minipage}{.3\textwidth}
+	\begin{flushleft}
+		\includegraphics[scale=0.8]{"Shapes/Fasl - 3/Dars 1/2-4.3.pdf"}
+	\end{flushleft}
 \end{minipage}
 
 در هر ذوزنقه‌ی متساوی‌الساقین، اقطار اندازه‌های مساوی دارند و برعکس.
 \smallskip
 
-\begin{minipage}{.6\textwidth}
+\begin{minipage}{.7\textwidth}
 		فرض:
 		$
 		AB \parallel CD , AD = BC
 		$
-		\qquad
+		\hfill
 		حکم:
 		$
 		AC = BD
@@ -801,19 +791,19 @@ $.
 		$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.35\textwidth}
-	\begin{center}
+\begin{minipage}{.3\textwidth}
+	\begin{flushleft}
 		\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S1.pdf"}
-	\end{center}
+	\end{flushleft}
 \end{minipage}
 
-\begin{minipage}{.6\textwidth}
+\begin{minipage}{.7\textwidth}
 		
 		فرض:
 		$
 		AC = BD
 		$
-		\qquad
+		\hfill
 		حکم:
 		$
 		AD = BC
@@ -842,10 +832,10 @@ $.
 		$
 	\end{flushleft}
 \end{minipage}
-\begin{minipage}{.35\textwidth}
-	\begin{center}
+\begin{minipage}{.3\textwidth}
+	\begin{flushleft}
 		\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S2.pdf"}
-	\end{center}
+	\end{flushleft}
 \end{minipage}
 \newpage
 
@@ -879,18 +869,26 @@ $.
 			$ \angle D = \angle D' $
 			در این حالت چگونه مساوی بودن اندازه‌های سایر ضلع‌ها و زاویه‌ها را نتیجه می‌گیرید؟
 
-\begin{center}
-					\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S3,4.pdf"}
-\end{center}
+		\begin{Figure}
+			\centering
+			\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S3,4.pdf"}
+			\captionof{figure}{تمرین ۲}
+		\end{Figure}
 
 \bigskip
 				\textbf{۳-} از تقاطع نیم‌سازهای داخلی یک متوازی‌الضلاع، چهارضلعی
 			MNPQ
 			پدید آمده‌است. ثابت کنید این چهارضعلی مستطیل است.
 			
-\begin{center}
-				\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S5.pdf"}
-\end{center}
+
+
+
+
+		\begin{Figure}
+			\centering
+			\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 1/PDFs/P63-S5.pdf"}
+			\captionof{figure}{تمرین ۳}
+		\end{Figure}
 
 			\bigskip
 			\textbf{۴-}مثلث قائم الزاویه‌ی 
@@ -911,8 +909,8 @@ $.
 			$30^{\circ}$
 			باشد، اندازه‌ی ضلع مقابل آن نصف اندازه‌ی وتر است.
 			
-			سپس با استفاده از قضیه‌ی فیثاغورث نشان دهید
-			$AC = \frac{\sqrt{3}}{2}BC$  
+			سپس با استفاده از قضیه‌ی فیثاغورث نشان دهید: 
+			$AC = \frac{\sqrt{3}}{2}BC$.
 			
 			یعنی در هر مثلث قائم الزاویه اگر یک زاویه 
 			$60^{\circ}$
@@ -923,10 +921,12 @@ $.
 			باشد و نشان دهید که اندازه‌ی هر ضلع زاویه‌ی قائمه در آن 
 			$\frac{\sqrt{2}}{2}$
 			اندازه‌ی وتر است.
-			
-\begin{center}
-				\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S1.pdf"}
-\end{center}
+
+		\begin{Figure}
+			\centering
+			\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S1.pdf"}
+			\captionof{figure}{تمرین ۴}
+		\end{Figure}
 
 			\bigskip
 			\textbf{۵-}در مثلث قائم الزاویه‌ی 
@@ -939,9 +939,13 @@ $.
 			$\frac14$
 			اندازه‌ی وتر است.
 			
-			\begin{center}
-				\includegraphics{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S2.pdf"}
-			\end{center}
+			\begin{Figure}
+				\centering
+				\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S2.pdf"}
+				\captionof{figure}{تمرین ۵}
+			\end{Figure}
+
+
 		
 			\bigskip
 			 \textbf{۶-} در متوازی الاضلاع  
@@ -951,16 +955,26 @@ $.
 			$AD$ و $BC$
 			می‌باشند. چرا خطوط
 			$MB$ و $ND$
-			موازی‌اند؟ به کمک آن ثابت کنید $AP = PQ = QC$
-			
+			موازی‌اند؟ \\
+			به کمک آن ثابت کنید: $AP = PQ = QC$.
+	
+\begin{Figure}
+	\centering
+	\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 1/PDFs/P64-S3"}
+	\captionof{figure}{تمرین ۶}
+	\label{fig:p64-s3}
+\end{Figure}
+
+
 			\bigskip
-			\textbf{7-}ثابت کنید اگر وسط های ضل عهای هر چهارضلعی را به طور متوالی به هم وصل کنیم، یک متواز یالاضلاع پدید می آید.
+			\textbf{7-}ثابت کنید اگر وسط های ضلع‌های هر چهارضلعی را به طور متوالی به هم وصل کنیم، یک متوازی‌الاضلاع پدید می‌آید.
 			
-			این چهارضلعی باید چه ویژگی ای داشت هباشد تا این متواز یالاضلاع مستطیل یا لوزی شود؟
+			این چهارضلعی باید چه ویژگی‌ای داشته‌ باشد تا این متوازی‌الاضلاع مستطیل یا لوزی شود؟
 			
-			چه رابطه‌ای بین محیط متوازی الاضلاع پدید آمده با اندازه‌های قطر‌های چهارضلعی اولیه وجود دارد؟
+			چه رابطه‌ای بین محیط متوازی‌الاضلاع پدید آمده با اندازه‌های قطر‌های چهارضلعی اولیه وجود دارد؟
 			
 	\end{multicols}
+
 
 \newpage
 
@@ -1042,7 +1056,8 @@ $.
 \begin{minipage}{0.65\textwidth}
 	١- اگر اندازهٔ یک ضلع مربع $a$ باشد، $S=a^2$ مساحت آن است.
 	
-	۲- اگر اندازهٔ یک ضلع مثلث $a$ و اندازهٔ ارتفاع نظیر آن ضلع $h_a$ باشد، آنگاه $S = \frac12 ah_a$
+	۲- اگر اندازهٔ یک ضلع مثلث $a$ و اندازهٔ ارتفاع نظیر آن ضلع $h_a$ باشد، آنگاه \\
+	$S=\frac12 ah_a$
 	
 	بنابراین در هر مثلث ABC اگر اندازه‌ی اضلاع ،BC AC و AB را به ترتیب با ،a b و c اندازه‌های ارتفاع‌های نظیر آن‌ها را به ترتیب با $h_a$، $h_b$ و $h_c$ نشان دهیم آن‌گاه، $2S = ah_a = bh_b = ch_c$
 	\end{minipage}
@@ -1112,7 +1127,7 @@ $.
 \begin{minipage}{0.65\textwidth}
 	در چهارضلعی ABCD دو قطر AC و DB برهم عموداند.
 	\begin{flushleft}
-		$ S_{ADB} = BD \times AH \times \frac12 \qquad \qquad S_{DBC} = BD \times CH \times \frac12 $
+		$ S_{ADB} = BD \times AH \times \frac12 \hfill S_{DBC} = BD \times CH \times \frac12 $
 	\end{flushleft}
 	با جمع این دو مساحت داریم:
 	\begin{flushleft}
@@ -1130,14 +1145,18 @@ $.
 در هر چهارضلعی‌ای که دو قطر آن برهم عمود باشند، مساحت برابر است با نصف حاصل ضرب دو قطر.
 
 \subsection{کاربردهایی از مساحت}
-قبلاً با کاربرد مساحت در اثبات قضیهٔ تالس آشنا شدید. بعضی رابطه ها و ویژگی‌هایی را که با آن آشنا شده اید یادآوری می کنیم.
+
+قبلاً با کاربرد مساحت در اثبات قضیهٔ تالس آشنا شدید. بعضی رابطه ها و ویژگی‌هایی را که با آن آشنا شده اید یادآوری می‌کنیم.
 \bigskip
 
 \textbf{ویژگی ۱}:
-در دو مثلث اگر اندازۀ قاعده‌ها برابر باشند، نسبت مساحت‌ها برابر نسبت اندازه‌ی ارتفاع‌های متناظر این قاعده‌هاست.
-$
-	\dfrac{S}{S'} = \dfrac{h}{h'}
-$
+در دو مثلث اگر اندازه‌ی قاعده‌ها برابر باشند، نسبت مساحت‌ها برابر نسبت اندازه‌ی ارتفاع‌های متناظر این قاعده‌هاست. \hfill
+		$
+			\dfrac{S}{S'} = \dfrac{h}{h'}
+		$
+
+
+
  \bigskip
 
 \textbf{ویژگی ۲}:
@@ -1228,12 +1247,12 @@ $
 	\end{flushleft}
 \end{minipage}
 
-فرمول مساحت اشکال شبکه‌ای به این صورت است:
+فرمول مساحت اشکال شبکه‌ای به این صورت است: 
 $S = \dfrac{b}{2} -1 + i$
 
-توجه داشته باشید که این فرمول را به طور شهودی پیدا کرده ایم. اثبات دقیق این فرمول در حالت کلی نیاز به مقدمات بیشتری دارد. 
+توجه داشته باشید که این فرمول را به طور شهودی پیدا کرده ایم. اثبات دقیق این فرمول در حالت کلی نیاز به مقدمات بیشتری دارد.
 
-این فرمول به فرمول پیک معروف است که جرج الکساندر پیک (1859ــ1943) آن را کشف کرد و از سال ۱۹۷۰ به طور گسترده‌ای در کتاب‌های هندسهٔ مقدماتی به کار برده شده است.
+این فرمول به فرمول پیک معروف است که جرج الکساندر پیک (۱۸۵۹-۱۹۴۳) آن را کشف کرد و از سال ۱۹۷۰ به طور گسترده‌ای در کتاب‌های هندسهٔ مقدماتی به کار برده شده است.
 
 به کمک این فرمول می توانیم مساحت شکل های نامنظم هندسی را نیز به طور تقریبی پیدا کنیم.
 
@@ -1263,6 +1282,12 @@ $2\sqrt{10}$
 $\dfrac12$
 است. مساحت لوزی را پیدا کنید.
 
+\begin{Figure}
+	\centering
+	\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 2/P72-S1.pdf"}
+	\captionof{figure}{تمرین ۱}
+\end{Figure}
+
 \bigskip
 
 \textbf{۲-} در چهارضلعی
@@ -1283,28 +1308,50 @@ $\angle C$
 \textbf{۳-}
 در شکل دو خط d و d' موازی‌اند و ABCD و ABEF هردو متوازی الاضلاع اند. اگر مساحت یکی از این متوازی الاضلاع ها برابر S باشد، مساحت دیگری برحسب S چقدر است؟
 
-	\begin{center}
-	\includegraphics{"Shapes/Fasl - 3/Dars 2/P72-S1.pdf"}
-\end{center}
+\begin{Figure}
+	\centering
+	\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 2/P72-S2.pdf"}
+	\captionof{figure}{تمرین ۳}
+\end{Figure}
 
 \bigskip
 \textbf{۴-}
 در ذوزنقهٔ شکل مقابل اندازه های دو قاعده a و b و اندازه های دو زاویهٔ مجاور به یک قاعده 
-$45^{\circ}$
+$^{\circ}$45
  است. مساحت ذوزنقه را برحسب a و b محاسبه کنید. از A و B بر قاعده DC عمود کنید.
+
+\begin{Figure}
+	\centering
+	\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 2/P72-S3.pdf"}
+	\captionof{figure}{تمرین ۴}
+\end{Figure}
+
 
 \bigskip
 \textbf{۵-}
 مساحت ذوزنقهٔ مقابل را به دو طریق به دست آورید. از مساوی قرار دادن آنها چه نتیجه ای به دست می‌آید؟
 
+\begin{Figure}
+	\centering
+	\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 2/P72-S4.pdf"}
+	\captionof{figure}{تمرین ۵}
+\end{Figure}
+
+
 \bigskip
 \textbf{۶-}
-در متوازی الاضلاع ABCD، M وسط ضلع BC است و پاره خط AM قطر BD را در N قطع کرده است. نشان دهید: 
-\begin{flushleft}
+در متوازی الاضلاع ABCD، M وسط ضلع BC است و پاره خط AM قطر BD را در N قطع کرده است. نشان دهید: \hfill
 	$
 \mathrm{S}_{\mathrm{BMN}} = \dfrac{1}{12} \mathrm{S}_{\mathrm{ABCD}}
 	$
-\end{flushleft}
+
+
+\begin{Figure}
+	\centering
+	\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 2/P72-S5.pdf"}
+	\captionof{figure}{تمرین 6}
+\end{Figure}
+
 
 \textbf{۷-}
 در مثلث ABC، خط MN موازی ضلع BC است و 
@@ -1315,19 +1362,35 @@ $ \dfrac{PC}{PB} = \dfrac{1}{3} $
 $ \mathrm{S}_{\mathrm{AQN}} $ و $\mathrm{S}_{\mathrm{MQPB}}$
 چه کسری از مساحت مثلث ABC است؟
 
+\begin{Figure}
+	\centering
+	\includegraphics[scale=1.2]{"Shapes/Fasl - 3/Dars 2/P73-S1.pdf"}
+	\captionof{figure}{تمرین 7}
+\end{Figure}
+
 \bigskip
 \textbf{۸-}
-با توجه به مساحت چندضلع یهای شبکه ای، مساحت قسمت سایه زده را محاسبه کنید.(راهنمایی: مساحت چند ضلعی داخلی را از مساحت چند ضلعی بیرونی کم کنید.)
+با توجه به مساحت چند ضلعی‌های شبکه‌ای
+ (شکل \ref{fig:p73-s2})،
+  مساحت قسمت سایه زده را محاسبه کنید.
+{{\small (راهنمایی: مساحت چند ضلعی داخلی را از مساحت چند ضلعی بیرونی کم کنید.)}
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{"Shapes/Fasl - 3/Dars 2/P73-S2.pdf"}
+	\captionof{figure}{تمرین 8}
+	\label{fig:p73-s2}
+\end{Figure}
 
 \bigskip
 \textbf{۹-}
-یک مستطیل شبکه ای با ضل عهای افقی و قائم که اندازه های ضل عهای آن m و n واحداند مفروض است. مساحت آن را ابتدا به روش معمول و سپس به کمک فرمول پیک محاسبه و آنها را مقایسه کنید.
+یک مستطیل شبکه ای با ضل عهای افقی و قائم که اندازه های ضلع‌های آن m و n واحداند مفروض است. مساحت آن را ابتدا به روش معمول و سپس به کمک فرمول پیک محاسبه و آنها را مقایسه کنید.
 
 \bigskip
 \textbf{۱۰-}
-مساحت یک چندضلعی شبکه‌ای ۳ واحد است. جدولی تشکیل دهید و تعداد نقاط مرزی و تعداد نقاط درونی را در حال تهایی که امکان دارد، مشخص کنید. اگر این چندضلعی شبک های مثلث باشد در هر حالت شکل آن را رسم کنید. در حالتی که نقاط مرزی بیشترین تعداد ممکن را دارند، شک لهای چهارضلع یهای نظیر آن را نیز رسم کنید.
+مساحت یک چند ضلعی شبکه‌ای ۳ واحد است. جدولی تشکیل دهید و تعداد نقاط مرزی و تعداد نقاط درونی را در حال تهایی که امکان دارد، مشخص کنید. اگر این چندضلعی شبک های مثلث باشد در هر حالت شکل آن را رسم کنید. در حالتی که نقاط مرزی بیشترین تعداد ممکن را دارند، شکل‌های چهارضلعی‌های نظیر آن را نیز رسم کنید.
 
-\end{multicols}
+}\end{multicols}
 
 \newpage
 
