@@ -4,6 +4,8 @@
 \author{ابوالفضل احمدی}
 
 \usepackage{setspace}
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
 \usepackage{multicol, caption}
 \usepackage[margin=2cm]{geometry}
 \usepackage{tikz-cd}
@@ -92,6 +94,37 @@ $\mathrm{2cm}$
 \section{استدلال}
 
 \chapter{قضیه‌ی تالس، تشابه و کاربردهای آن}
+\section{قضیه تالس}
+در مثلث \lr{ABC} اگر $ DE \parallel BC $ باشد، آنگاه داریم: 
+$ \dfrac{AE}{EC} = \dfrac{AD}{DB} $.
+
+فرض:
+$DE \parallel BC$   \hfil
+حکم:
+$\dfrac{AE}{EC} = \dfrac{AD}{DB}$
+
+$S_{DEC} = S_{DEB} (*)$
+
+$
+\left.
+\begin{array}{ccc}
+	\dfrac{S_{DEA}}{S_{DEC}} = \dfrac{EA}{EC} \\
+	\dfrac{S_{DEA}}{S_{DEB}} = \dfrac{DA}{DB}
+\end{array}
+\right\} \xrightarrow{(*)} \dfrac{EA}{EC} = \dfrac{DA}{DB}
+$
+
+\subsection{تعمیم تالس}
+فرض:
+$DE \parallel BC$ \hfil
+حکم:
+$ \dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{DE}{BC} $
+
+$  \dfrac{EA}{EC} = \dfrac{DA}{DB} \xRightarrow[\text{در مخرج}]{\text{جمع نسبت}} \dfrac{AD}{AD+DB} = \dfrac{AE}{AE+EC} \Rightarrow \dfrac{AD}{AB} = \dfrac{AE}{AC} $
+
+از \lr{E} خطی به موازات \lr{AB} رسم می‌‌کنیم تا \lr{BC} را در نقطه \lr{F} قطع کند.
+
+$ \dfrac{\cancelto{DE}{BF}}{BC} = \dfrac{AE}{AC} = \dfrac{AD}{AB} $
 
 
 \chapter{چند ضلعی‌ها}
@@ -101,7 +134,7 @@ $\mathrm{2cm}$
 {\semibold تعریف:}
 n
 ضلعی شکلی است شامل 
-$\text{n}(\mbox{3} \geq \text{n})$
+$(n \geq 3)$ n
 پاره‌خط متوالی که:\\
 1) هر پاره‌خطی، دقیقاً دو پاره‌خط دیگر را در نقاط انتهایی خودش قطع کند.\\
 2) هر دو پاره‌خط که در یک انتها مشترک‌اند، روی یک خط نباشند.
@@ -152,9 +185,9 @@ n-۱
 
 {\medium ب)} اگر در متوازی‌الاضلاع یکی از زوایا قائمه باشد، مستطیل است.
 
-{\medium پ)} لوزی یک متوازی‌الضلاع است
+{\medium پ)} لوزی یک متوازی‌الضلاع است.
 
-{\medium ت)} مربع یک لوزی، مستطیل و متوازی‌الاضلاع است
+{\medium ت)} مربع یک لوزی، مستطیل و متوازی‌الاضلاع است.
 
 \subsection{ویژگی‌هایی از متوازی‌الاضلاع}
 متوازی‌الاضلاع چهارضلعی‌ای است که، هر دو ضلع مقابل آن موازی باشند.
@@ -1002,8 +1035,8 @@ $.
 			n = \dfrac{n(n-3)}{2} \Rightarrow 2n = n^2 - 3n \Rightarrow n^2 -5n = 0 \Rightarrow n(n-5) = 0 \Rightarrow 
 			\left\{
 				\begin{array}{lll}
-					x = 0 & \mbox{ق‌ق} \\
-					\fbox{$x = 5$} &  \mbox{غ‌ق‌ق} 
+					x = 0 & \mbox{غ‌ق‌ق} \\
+					\fbox{$x = 5$} &  \mbox{‌ق‌ق} 
 				\end{array}
 			\right.
 		$
@@ -1291,9 +1324,9 @@ $.
 	 صفر
 	
 	۳ـ در تمام چندضلعی های شبکه ای زیر تعداد نقطه های درونی شبکه ای صفر است، یعنی
-	0\lr{i=}
+	$i=0$
 	و تعداد نقاط مرزی، 
-	$\mbox{b} = 3 , 4, 5, 6 , 7$
+	$b = 3 , 4, 5, 6 , 7$.
 \end{minipage}   
 \begin{minipage}{.32\textwidth}
 	\begin{flushleft}
